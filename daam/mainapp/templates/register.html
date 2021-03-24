@@ -10,12 +10,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      color:darkslategray
-    }
-  </style>
+  <title>Register</title>
+
 </head>
 
 <body>
@@ -24,7 +20,7 @@
     <form action="">
      
     <!-- Intro text -->
-    <div class="jumbotron text-center temp" style="color: darkslategray">
+    <div class="jumbotron text-center temp">
       <h2>Sign Up</h2>
       <p class="lead"><i>Please use your tBank login details.</i></p>
     </div>
@@ -34,6 +30,14 @@
 
 
       <div>
+        <h4>Name</h4>
+        <input
+          name="name"
+          type="text"
+          class="form-control my-4"
+          placeholder="What is your name?"
+        />
+
         <h4>User ID</h4>
         <input
           name="userID"
@@ -44,7 +48,7 @@
 
         <h4>PIN</h4>
         <input
-          name="userID"
+          name="PIN"
           type="text"
           class="form-control my-4"
           placeholder="What is your PIN?"
@@ -98,7 +102,7 @@
       
       <h4 class="text-center mb-3">Please choose your risk appetite:</h4>
 
-      <select class="form-control" id="typeForm" v-model="type">
+      <select class="form-control" id="typeForm" v-model="type" name="riskAppetite">
         <!-- <option selected disabled>I am</option> -->
         <option value="low">Low</option>
         <option value="medium">Medium</option>
