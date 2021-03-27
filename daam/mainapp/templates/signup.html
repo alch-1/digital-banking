@@ -17,8 +17,8 @@
 <body>
   <div class="container pb-3 w-70">
     <!-- Send to django backend -->
-    <form action="">
-     
+    <form method="POST" action="">
+      {% csrf_token %}
     <!-- Intro text -->
     <div class="jumbotron text-center temp">
       <h2>Sign Up</h2>
@@ -27,36 +27,44 @@
 
     <!-- tbank details -->
     <div class="form-group text-center">
-
+      
 
       <div>
         <h4>Name</h4>
-        <input
+        <!-- <input
           name="name"
           type="text"
           class="form-control my-4"
           placeholder="What is your name?"
-        />
+        /> -->
+        {{ form.name }}
 
+        
         <h4>User ID</h4>
-        <input
+        <!-- <input
           name="userID"
           type="text"
           class="form-control my-4"
           placeholder="What is your user ID?"
-        />
+        /> -->
+        {{ form.username }}
 
         <h4>PIN</h4>
-        <input
+        <!-- <input
           name="PIN"
           type="text"
           class="form-control my-4"
           placeholder="What is your PIN?"
-        />
+        /> -->
+        {{ form.password1 }}
+        <h4>Retype your PIN</h4>
+        {{ form.password2 }}
       </div>
     </div>
 
-
+    {% if msg %}
+    <h3>{{msg}}</h3>
+    {% endif %}
     <!-- Risk appetite selection -->
     <div class="form-group">
 
@@ -98,23 +106,22 @@
         </div>
       </div>
       
-
+     
       
       <h4 class="text-center mb-3">Please choose your risk appetite:</h4>
-
-      <select class="form-control" id="typeForm" v-model="type" name="riskAppetite">
-        <!-- <option selected disabled>I am</option> -->
+      {{ form.appetite}}
+      <!-- <select class="form-control" id="typeForm" v-model="type" name="riskAppetite">
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>
-      </select>
+      </select> -->
 
-
+      {{form.errors}}
     </div>
 
     <!-- Submit -->
     <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button type="submit" class="btn btn-info">Signup</button>
     </div>
 
     </form>
