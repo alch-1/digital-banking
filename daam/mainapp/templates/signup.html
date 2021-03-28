@@ -57,10 +57,13 @@
 
   <div class="container pb-3 w-70 animate__animated animate__fadeIn">
     <!-- Send to django backend -->
-    <form action="">
-     
+    <form method="POST" action="">
+    <!-- {% csrf_token %} -->
+
+
     <!-- tbank details -->
     <div class="form-group text-center">
+      
 
       <div>
         <h3>Name</h3>
@@ -70,27 +73,37 @@
           class="form-control my-4"
           placeholder="What is your name?"
         />
+        <!-- {{ form.name }} -->
 
         <h3>User ID</h3>
+
         <input
           name="userID"
           type="text"
           class="form-control my-4"
           placeholder="What is your user ID?"
         />
+        <!-- {{ form.username }} -->
 
         <h3>PIN</h3>
+
         <input
           name="PIN"
           type="text"
           class="form-control my-4"
           placeholder="What is your PIN?"
         />
+        <!-- {{ form.password1 }}
+        <h4>Retype your PIN</h4>
+        {{ form.password2 }} -->
       </div>
     </div>
 
     <h3 class="text-center mb-3">Please choose your risk appetite:</h3>
 
+    <!-- {% if msg %}
+    <h3>{{msg}}</h3>
+    {% endif %} -->
     <!-- Risk appetite selection -->
     <div class="form-group">
 
@@ -138,6 +151,18 @@
         <option value="medium">Medium</option>
         <option value="high">High</option>
       </select>
+      
+     
+      
+      <!-- <h4 class="text-center mb-3">Please choose your risk appetite:</h4>
+      {{ form.appetite}}
+      <!-- <select class="form-control" id="typeForm" v-model="type" name="riskAppetite">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select> -->
+
+      <!-- {{form.errors}} -->
     </div>
 
     <!-- Submit -->
