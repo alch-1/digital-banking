@@ -26,22 +26,32 @@
         .kiona {
             font-family: Kiona;
         }
+        
+        .klik {
+            font-family: Klik;
+        }
+
+        .icon {
+            width: 50px;  
+        }
     </style>
 </head>
 <body>
+    <!-- Jumbotron -->
+    <div class="text-center jumbotron animate__animated animate__fadeIn">
+        <img src="images/invest.png" class="img-fluid icon pb-3" alt="">
+
+        <h1 class="display-4 kiona">Settings</h1>
+        <p class="lead">Customize your portfolio</p>
+    </div>
+
     <!-- Let user change his/her risk appetite -->
-    <div class="container pb-3 w-70 text-center">
-
-        <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1 class="display-4">Settings</h1>
-            <p class="lead"></p>
-        </div>
-
+    <div class="container pb-3 w-70 text-center animate__animated animate__fadeIn">
+        
         <!-- Portfolio settings -->
         <h1 class="kiona">Portfolio Settings</h1>
-        <p>Your monthly investment amount is: {{ monthly_investment }}</p>
-        <p>Please input your new monthly investment amount:</p>
+        <p class="klik">Your monthly investment amount is: {{ monthly_investment }}</p>
+        <p class="klik">Please input your new monthly investment amount:</p>
         <input
           name="monthly_investment"
           type="text"

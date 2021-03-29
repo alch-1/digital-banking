@@ -33,6 +33,10 @@
             font-family: Kiona;
         }
 
+        .klik {
+            font-family: Klik;
+        }
+
         .icon {
             width: 50px;  
         }
@@ -50,7 +54,7 @@
     <!-- Summary of stocks -->
     <div class="container pb-3 w-70 animate__animated animate__fadeIn">
         <div>
-            <h2 class="text-center kiona">Stocks Summary</h2>
+            <h2 class="text-center kiona pb-3">Stocks Summary</h2>
             <!-- Insert graph here -->
             <!-- Reference: https://www.chartjs.org/docs/latest/charts/doughnut.html -->
             <div class="container pb-3 w-50">
@@ -90,8 +94,9 @@
             </script>
         </div>
 
-        <div>
-            <h2 class="text-center kiona">Historical Performance</h2>
+        <div class="container pb-3 w-70 animate__animated animate__fadeIn">
+            <!-- Historical performance - bar chart -->
+            <h2 class="text-center kiona pb-3">Historical Performance</h2>
             <!-- Insert graph here -->
             <div class="container pb-3 w-50">
                 <canvas id="historical" width="200" height="200"></canvas>
@@ -144,6 +149,43 @@
             </script>
 
 
+        </div>
+
+        <div class="container pb-3 w-70 animate__animated animate__fadeIn">
+            <!-- Monthly statement -->
+            <h2 class="text-center kiona pb-3">Monthly Statement</h2>
+
+            <!-- Monthly statement table -->
+            <table class="table klik">
+                <thead>
+                  <tr>
+                    <th scope="col">Stock Ticker</th>
+                    <th scope="col">No. of Shares</th>
+                    <th scope="col">Stock Price</th>
+                    <th scope="col">Total Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">NASDAQ: FB</th>
+                    <td>100</td>
+                    <td>$270.00</td>
+                    <td>$27000.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">NASDAQ: GOOGL</th>
+                    <td>100</td>
+                    <td>$1853.00</td>
+                    <td>$185300.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">NASDAQ: AMZN</th>
+                    <td>100</td>
+                    <td>$3100.00</td>
+                    <td>$310000.00</td>
+                  </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
