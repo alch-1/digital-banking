@@ -103,29 +103,29 @@
             </div>
 
             <script>
-                var ctx = document.getElementById('historical');
-                var myChart = new Chart(ctx, {
+                var ctx1 = document.getElementById('historical');
+                var myChart = new Chart(ctx1, {
                     type: 'bar',
                     data: {
-                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        labels: ['10/20', '11/20', '12/20', '01/21', '02/21', '03/21'],
                         datasets: [{
-                            label: '# of Votes',
+                            label: 'Profit/Loss(%)',
                             data: [12, 19, 3, 5, 2, -3],
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
+                                'rgba(75, 192, 192, 0.2)', // green
+                                'rgba(75, 192, 192, 0.2)', // green
+                                'rgba(75, 192, 192, 0.2)', // green
+                                'rgba(75, 192, 192, 0.2)', // green
+                                'rgba(75, 192, 192, 0.2)', // green
+                                'rgba(255, 99, 132, 0.2)', // red
                             ],
                             borderColor: [
-                                'rgba(255, 99, 132, 1)', // red 
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
                                 'rgba(75, 192, 192, 1)', // green
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(75, 192, 192, 1)', // green
+                                'rgba(75, 192, 192, 1)', // green
+                                'rgba(75, 192, 192, 1)', // green
+                                'rgba(75, 192, 192, 1)', // green
+                                'rgba(255, 99, 132, 1)', // red 
                             ],
                             borderWidth: 1
                         }]
@@ -138,9 +138,9 @@
                                 }
                             }]
                         },
-                        color: function(ctx) {
-                            var index = ctx.dataIndex;
-                            var value = ctx.dataset.data[index];
+                        color: function(ctx1) {
+                            var index = ctx1.dataIndex;
+                            var value = ctx1.dataset.data[index];
                             return value < 0 ? 'rgba(255, 99, 132, 1)' :  // draw negative values in red
                                 'rgba(75, 192, 192, 1)'
                         }

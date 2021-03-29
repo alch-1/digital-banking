@@ -47,6 +47,7 @@
 </head>
 
 <body>
+  
   <!-- Intro text -->
   <div class="jumbotron text-center animate__animated animate__fadeIn">
     <img src="images/invest.png" class="img-fluid icon pb-3" alt="">
@@ -99,71 +100,7 @@
       </div>
     </div>
 
-    <h3 class="text-center mb-3">Please choose your risk appetite:</h3>
-
-    <!-- {% if msg %}
-    <h3>{{msg}}</h3>
-    {% endif %} -->
-    <!-- Risk appetite selection -->
-    <div class="form-group">
-
-      <!-- Grid to hold risk appetite cards -->
-      <div class="container mb-3">
-        <div class="row">
-          <!-- Low risk appetite -->
-          <div class="col-sm hvr-float-shadow" data-toggle="tooltip" data-placement="top" title="" d-flex align-items-stretch>
-            <div class="card text-white bg-success mb-3 h-100">
-            <div class="card-header text-center"><h3>Low risk</h3></div>
-            <div class="card-body">
-              <!-- <h5 class="card-title">Success card title</h5> -->
-              <p class="card-text text-center">Preference for ultra-safe stocks that are low risk and only have a potential for limited reward.</p>
-            </div>
-          </div>
-        </div>
-          
-          <!-- Medium risk appetite -->
-          <div class="col-sm hvr-float-shadow" d-flex align-items-stretch>
-            <div class="card text-darkslategrey bg-warning mb-3 h-100">
-              <div class="card-header text-center"><h3>Medium risk</h3></div>
-              <div class="card-body">
-                <!-- <h5 class="card-title">Success card title</h5> -->
-                <p class="card-text text-center">Preference for good returns, while also providing an acceptable level of reward and value for money.</p>
-              </div>
-            </div>
-          </div>
-            
-          <!-- High risk appetite -->
-          <div class="col-sm hvr-float-shadow" d-flex align-items-stretch>
-            <div class="card text-white bg-danger mb-3 h-100">
-              <div class="card-header text-center"><h3>High risk</h3></div>
-              <div class="card-body">
-                <!-- <h5 class="card-title">Success card title</h5> -->
-                <p class="card-text text-center">Preference for higher returns, while being willing to bear the increased risks associated with them.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <select class="form-control" id="typeForm" v-model="type" name="riskAppetite">
-        <option selected disabled>My risk appetite is...</option>
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-      </select>
-      
-     
-      
-      <!-- <h4 class="text-center mb-3">Please choose your risk appetite:</h4>
-      {{ form.appetite}}
-      <!-- <select class="form-control" id="typeForm" v-model="type" name="riskAppetite">
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-      </select> -->
-
-      <!-- {{form.errors}} -->
-    </div>
+    
 
     <!-- Submit -->
     <div class="d-flex justify-content-center">
@@ -173,7 +110,5 @@
     </form>
   </div>
 
-
-  
 </body>
 </html>
