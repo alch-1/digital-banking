@@ -1,2 +1,2 @@
-# new_daam
-Digital Banking
+# Digital Banking Project
+Uses SMU tBank API
