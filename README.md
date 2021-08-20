@@ -8,5 +8,9 @@ Features:
 
 Technologies used:
 - HTML, CSS, JS
-- Flask backend
+- Chart.js
+- Bootstrap
+- Python (Flask) backend
+- PyPortfolioOpt
+- Pandas
 - Bokeh
